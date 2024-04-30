@@ -36,4 +36,6 @@ npx shadcn-ui@latest init
 // para usar o card do shadcn deve se adicionar ele.
 npx shadcn-ui@latest add card
 
+// 
+npm install -D husky lint-staged
 

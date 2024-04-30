@@ -1,0 +1,19 @@
+// criar projeto
+npx create-next-app@latest fsw-foods
+
+// iniciar um prisma
+npx prisma init --datasource-provider postgresql
+
+// verificar schema
+npx prisma format
+
+// conectar ao git
+git init
+git add .
+git commit -m "X"
+git branch -M main
+git remote add origin https://github.com/douglasnec/fswfoods.git
+git push -u origin main
+
+// criando uma migration no bd
+npx prisma migrate dev --name init_database

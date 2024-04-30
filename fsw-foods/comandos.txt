@@ -17,3 +17,23 @@ git push -u origin main
 
 // criando uma migration no bd
 npx prisma migrate dev --name init_database
+
+//  não entendi
+npm install -D ts-node
+
+// rodar seed
+npx prisma db seed
+
+// instalar o tailwind
+npm install tailwindcss
+
+// instalar o chadcn... rodar isso dentro do projeto fsw-foods
+npx shadcn-ui@latest init
+
+// colocar components dentro de app fsw-foods e editar arquivo components
+
+
+// para usar o card do shadcn deve se adicionar ele.
+npx shadcn-ui@latest add card
+
+

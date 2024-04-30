@@ -1,4 +1,4 @@
-import Image from "next/image";
+const name = "";
 
 export default function Home() {
   return (

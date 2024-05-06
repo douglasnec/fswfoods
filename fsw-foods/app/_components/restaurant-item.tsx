@@ -21,7 +21,7 @@ const RestaurantItem = ({restaurant, className }: restaurantItemProps) => {
                     <Image
                         src={restaurant.imageUrl}
                         fill
-                        className='rouded-lg object-cover'
+                        className='rounded-lg object-cover'
                         alt={restaurant.name}
                         />
                     <div className='absolute left-2 top-2 flex items-center gap-[2px] rounded-full bf-primary'>

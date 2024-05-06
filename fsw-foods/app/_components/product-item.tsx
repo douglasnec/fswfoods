@@ -1,19 +1,29 @@
-import { Product } from '@prisma/client'
+import { Prisma } from '@prisma/client'
 import Image from 'next/image'
 import { computeProductTotalPrice, formatCurrency } from '../_helpers/price';
 import Link from 'next/link';
+import { cn } from '../_lib/utils';
 
 interface productItemProps {
-    product: Product;
+    product: Prisma.ProductGetPayload<{
+        include: {
+            restaurant: {
+                select: {
+                    name: true
+                }
+            }
+        }
+    }>;
+    className?: string
 }
 
-const ProductItem = ({ product }: productItemProps) => {
+const ProductItem = ({ product, className }: productItemProps) => {
     
 
     return (
-        <Link className='w-[150px] y-[150px]' href={`/products/${product.id}`}>
+        <Link className={cn('w-[150px] y-[150px]', className)}  href={`/products/${product.id}`}>
             <div className='space-y-2 w-full'>
-                <div className='h-[150px] w-full relative'>
+                <div className='relative aspect-square w-full'>
                     <Image
                         src={product.imageUrl}
                         alt={product.name}
